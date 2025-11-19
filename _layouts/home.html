@@ -3,12 +3,12 @@ layout: default
 ---
 <section class="mb-16">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<!-- 左：新着記事 -->
+<!-- 左：現状のプロジェクト -->
 <div class="space-y-4">
 <h2 class="text-2xl font-semibold border-b pb-2 mb-4">
-<a href="{{ '/posts/' | relative_url }}" class="hover:text-blue-600">記事一覧 &rarr;</a>
+<a href="{{ '/posts/' | relative_url }}" class="hover:text-blue-600">旅のしおり &rarr;</a>
 </h2>
-<h3>最新記事はこちら↓</h3>
+
 {% for post in site.posts limit: 5 %}
   {% assign summary_source = post.description | default: post.excerpt %}
   {% assign summary = summary_source | strip_html %}
@@ -39,7 +39,7 @@ layout: default
 <!-- 右：ツール導線 -->
 <div class="space-y-4">
   <h2 class="text-2xl font-semibold border-b pb-2 mb-4">
-    <a href="{{ '/tools/' | relative_url }}" class="hover:text-blue-600">便利なツール &rarr;</a>
+    <a href="{{ '/tools/' | relative_url }}" class="hover:text-blue-600">ツール &rarr;</a>
   </h2>
 
   {% comment %} 1. 表示したいツールのIDをカンマ区切りで指定 {% endcomment %}
